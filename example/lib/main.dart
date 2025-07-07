@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cqminh_widget/widgets/custom_button.dart';
+import 'package:cqminh_widget/cqminh_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +12,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Widget Library Example')),
+        appBar: MAppBar(
+          title: 'CQMinh Widget Example',
+        ),
         body: Center(
-          child: CustomButton(
-            label: 'Press Me',
-            onPressed: () {
-              print('Button pressed!');
-            },
+          child: MText(
+            text: 'Hello, World!',
+            bold: true,
+            italic: true,
+            fontSize: MFontSize.normal,
           ),
         ),
       ),
